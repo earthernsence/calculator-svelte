@@ -1,0 +1,152 @@
+html {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  scrollbar-color: grey transparent;
+  font-size: 62.5%;
+}
+
+::-webkit-scrollbar {
+  width: 1.6rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-clip: content-box;
+  background-color: grey;
+  border: 0.2rem solid transparent;
+  border-radius: var(--var-border-radius, 0.5rem);
+}
+
+::-webkit-scrollbar-corner {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Typewriter, serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: rgb(65, 65, 65);
+  margin: 0;
+  padding: 0;
+
+  scrollbar-gutter: stable;
+}
+
+:root {
+  /* Don't change this instance of --color-text or any of its values in other themes to not be hex; it's parsed as hex
+    elsewhere to provide theme-dependent color gradients */
+  --color-text: #e0e0e0;
+  --color-text-inverted: black;
+  --color-base: #455a64;
+  --color-disabled: #37474f;
+  --color-accent: #1256a3;
+  --color-good: #5ac467;
+  --color-good-dark: #127a20;
+  --color-good-paused: #e3e638;
+  --color-bad: #b84b5f;
+
+  --color-slider-blue: #0075ff;
+}
+
+@font-face {
+  font-family: Typewriter;
+  src: url("/fonts/MonospaceTypewriter.ttf");
+}
+
+button:focus {
+  outline: none;
+}
+
+.o-text__small {
+  font-size: 0.75rem;
+}
+
+.o-text {
+  font-size: 1.1rem;
+}
+
+.o-text__medium {
+  font-size: 2rem;
+}
+
+.o-text__large {
+  font-size: 3.5rem;
+}
+
+.o-text__right-align {
+  display: flex;
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.c-main-title {
+  padding: 3rem;
+}
+
+.c-main-subtitle {
+  padding: 0 3rem 3rem 3rem;
+}
+
+.o-primary-btn {
+  height: 2.5rem;
+  font-family: Typewriter, serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--color-text);
+  background-color: var(--color-base);
+  border: 0.1rem solid var(--color-good-dark);
+  border-radius: var(--var-border-radius, 0.4rem);
+  padding: 0.3rem 1rem;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.o-primary-btn:hover {
+  color: var(--color-text-inverted);
+  background-color: var(--color-good);
+}
+
+a,
+a:visited {
+  color: var(--color-accent);
+}
+
+/* #region calculator */
+
+.o-calculator-wrapper {
+  width: 310px;
+  height: 510px;
+  display: flex;
+  border: 5px solid blue;
+  align-content: center;
+  justify-content: center;
+}
+
+.o-calculator__display-pane {
+  width: 270px;
+  height: 60px;
+  border: 5px solid red;
+  display: flex;
+  position: relative;
+  top: 10px;
+  text-align: right;
+  padding: 0.1rem;
+}
+
+/* #endregion calculator */
