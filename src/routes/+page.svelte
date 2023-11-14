@@ -2,6 +2,7 @@
   // Components
   import Calculator from "@/Calculator.svelte";
   import Welcome from "@/Welcome.svelte";
+  import HistoryPane from "@/history/HistoryPane.svelte";
 
   // CSS
   import "../styles/styles.css";
@@ -13,5 +14,8 @@
   </div>
   <div>
     <Calculator />
+  </div>
+  <div>
+    <HistoryPane />
   </div>
 </body>

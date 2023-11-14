@@ -1,7 +1,11 @@
 <script lang="ts">
-  import { displayValue } from "globals";
+  import EquationDisplay from "@/EquationDisplay.svelte";
+  import { displayValue, previousEquation } from "globals";
 </script>
 
 <div class="o-calculator__display-pane">
-  <div class="o-text__large o-text__right-align">{ $displayValue }</div>
+  <EquationDisplay
+    current={$displayValue}
+    previous={$previousEquation}
+  />
 </div>
